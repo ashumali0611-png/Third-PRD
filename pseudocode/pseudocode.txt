@@ -1,0 +1,234 @@
+START
+
+Create Scanner object
+
+Display CampusTrack heading
+
+Read student ID
+
+Consume pending newline
+
+Read complete student name
+
+Read age
+
+WHILE age < 16 OR age > 30
+    Display "Invalid age. Enter a value between 16 and 30."
+    Read age again
+END WHILE
+
+
+Display course menu
+
+Display "1. BCA"
+Display "2. B.Sc Computer Science"
+Display "3. B.E/B.Tech"
+
+Read course choice
+
+WHILE course choice < 1 OR course choice > 3
+    Display "Invalid course choice. Enter a value from 1 to 3."
+    Read course choice again
+END WHILE
+
+
+Set course name as empty
+
+Set semester fee as 0
+
+
+SWITCH course choice
+
+    CASE 1:
+        Set course name = "BCA"
+        Set semester fee = 30000
+        BREAK
+
+    CASE 2:
+        Set course name = "B.Sc Computer Science"
+        Set semester fee = 35000
+        BREAK
+
+    CASE 3:
+        Set course name = "B.E/B.Tech"
+        Set semester fee = 50000
+        BREAK
+
+END SWITCH
+
+
+Read Java marks
+
+WHILE Java marks < 0 OR Java marks > 100
+    Display "Invalid marks. Enter a value between 0 and 100."
+    Read Java marks again
+END WHILE
+
+
+Read SQL marks
+
+WHILE SQL marks < 0 OR SQL marks > 100
+    Display "Invalid marks. Enter a value between 0 and 100."
+    Read SQL marks again
+END WHILE
+
+
+Read Aptitude marks
+
+WHILE Aptitude marks < 0 OR Aptitude marks > 100
+    Display "Invalid marks. Enter a value between 0 and 100."
+    Read Aptitude marks again
+END WHILE
+
+
+Calculate total marks
+
+totalMarks = javaMarks + sqlMarks + aptitudeMarks
+
+Calculate average
+
+average = totalMarks / 3.0
+
+
+IF javaMarks >= 35 AND
+   sqlMarks >= 35 AND
+   aptitudeMarks >= 35
+
+    academicResult = "PASSED"
+
+ELSE
+
+    academicResult = "FAILED"
+
+END IF
+
+
+IF academicResult = "FAILED"
+
+    grade = "F"
+
+ELSE IF average >= 75
+
+    grade = "A"
+
+ELSE IF average >= 60
+
+    grade = "B"
+
+ELSE IF average >= 50
+
+    grade = "C"
+
+ELSE
+
+    grade = "D"
+
+END IF
+
+
+Read attendance percentage
+
+WHILE attendance < 0 OR attendance > 100
+    Display "Invalid attendance. Enter a value between 0 and 100."
+    Read attendance again
+END WHILE
+
+
+IF attendance >= 75
+    attendanceStatus = "SUFFICIENT"
+ELSE
+    attendanceStatus = "SHORTAGE"
+END IF
+
+
+Read fee paid
+
+WHILE feePaid < 0 OR feePaid > semesterFee
+    Display "Invalid fee paid."
+    Read fee paid again
+END WHILE
+
+
+Calculate fee balance
+
+feeBalance = semesterFee - feePaid
+
+
+IF feeBalance == 0
+    feeStatus = "CLEARED"
+ELSE
+    feeStatus = "PENDING"
+END IF
+
+
+IF academicResult = "PASSED"
+   AND attendance >= 75
+   AND feeBalance == 0
+
+    semesterStatus = "SEMESTER CLEARED"
+
+ELSE
+
+    semesterStatus = "SEMESTER NOT CLEARED"
+
+END IF
+
+
+Display Student Semester Report
+
+Display student ID
+Display student name
+Display age
+Display course
+
+Display Java marks
+Display SQL marks
+Display Aptitude marks
+Display total marks
+Display average
+Display academic result
+Display grade
+
+Display attendance
+Display attendance status
+
+Display semester fee
+Display fee paid
+Display fee balance
+Display fee status
+
+Display semester status
+
+
+IF semesterStatus = "SEMESTER NOT CLEARED"
+
+    Display "Reasons:"
+
+    IF javaMarks < 35
+        Display "Java marks are below 35."
+    END IF
+
+    IF sqlMarks < 35
+        Display "SQL marks are below 35."
+    END IF
+
+    IF aptitudeMarks < 35
+        Display "Aptitude marks are below 35."
+    END IF
+
+    IF attendance < 75
+        Display "Attendance is below 75%."
+    END IF
+
+    IF feeBalance > 0
+        Display "Semester fee is pending."
+    END IF
+
+END IF
+
+
+Display closing line
+
+Close Scanner
+
+STOP
