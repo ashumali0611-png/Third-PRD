@@ -1,0 +1,63 @@
+==================================================
+                 CAMPUSTRACK
+==================================================
+        Simple Student Result Management System
+--------------------------------------------------
+Enter student ID: 
+STU101
+Enter student name: 
+Ananya Rao
+Enter age: 
+20
+
+Select Course
+1. BCA
+2. B.Sc Computer Science
+3. B.E/B.Tech
+Enter course choice: 
+3
+Enter Java marks: 
+35
+Enter SQL marks: 
+35
+Enter Aptitude marks: 
+35
+Enter attendance percentage: 
+75
+Enter fee paid: 
+0
+User program finished
+
+==================================================
+              STUDENT SEMESTER REPORT
+==================================================
+Student ID          : STU101
+Student Name        : Ananya Rao
+Age                 : 20
+Course              : B.E/B.Tech
+
+--------------- ACADEMIC DETAILS -----------------
+Java Marks          : 35
+SQL Marks           : 35
+Aptitude Marks      : 35
+Total Marks         : 105/300
+Average             : 35.00
+Academic Result     : PASSED
+Grade               : D
+
+--------------- ATTENDANCE DETAILS ---------------
+Attendance          : 75.00%
+Attendance Status   : SUFFICIENT
+
+------------------ FEE DETAILS --------------------
+Semester Fee        : ?50000.00
+Fee Paid            : ?0.00
+Fee Balance         : ?50000.00
+Fee Status          : PENDING
+
+---------------- FINAL STATUS ---------------------
+Semester Status     : SEMESTER NOT CLEARED
+
+Reasons:
+- Semester fee is pending.
+==================================================
